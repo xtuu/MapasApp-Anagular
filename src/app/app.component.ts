@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 import { environment } from 'src/environments/environment';
 
+import 'flowbite';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

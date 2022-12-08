@@ -1,17 +1,34 @@
 <div>
     <div class="flex flex-1 flex-col md:pl-64">
-      
+
         <main>
             <div class="py-6">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                    <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
+                    <h1 class="text-2xl font-semibold text-gray-900 mb-1">Lista de propiedades</h1>
+                    <hr>
                 </div>
-                <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                    <!-- Replace with your content -->
-                    <div class="py-4">
-                        <div class="h-96 rounded-lg border-4 border-dashed border-gray-200"></div>
-                    </div>
-                    <!-- /End replace -->
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 mt-8">
+
+
+                    <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                        <li *ngFor="let propiedad of propiedades"
+                            class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow">
+                            <div class="flex flex-1 flex-col p-8">
+                                <app-mini-mapa [lngLat]="propiedad.lngLat"
+                                    class="mx-auto h-32 w-32 flex-shrink-0 rounded-full"></app-mini-mapa>
+                                <h3 class="mt-6 text-sm font-medium text-gray-900">{{propiedad.titulo}}</h3>
+                                <dl class="mt-1 flex flex-grow flex-col justify-between">
+                                    <dt class="sr-only">Title</dt>
+                                    <dd class="text-sm text-gray-500">{{propiedad.descripcion}}</dd>
+                                </dl>
+                            </div>
+
+                        </li>
+
+
+                    </ul>
+
+
                 </div>
             </div>
         </main>

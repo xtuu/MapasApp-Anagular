@@ -4,8 +4,8 @@
 
 <div class="bg-white rounded p-2 fixed bottom-8 left-5 z-50 w-96">
 
-    <p>Zoom: <span class="font-bold">{{zoomLevel | number:'2.0-2'}}</span> -Lng, Lat: <span class="font-bold">[123,
-            456]</span></p>
+    <p>Zoom: <span class="font-bold">{{zoomLevel | number:'2.0-2'}}</span>
+        -Lng, Lat: <span class="font-bold">[{{ center[0] | number:'2.4-4' }}, {{ center[1] | number:'2.4-4' }} ]</span></p>
 
     <label for="default-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Default
         range</label>

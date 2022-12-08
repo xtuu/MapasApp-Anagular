@@ -1,11 +1,13 @@
 <ul
     class="fixed top-5 right-5 w-48 z-50 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-    <li (click)="agregarMarcador()" class="py-2 px-4 w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600 cursor-pointer">
+    <li (click)="agregarMarcador()"
+        class="py-2 px-4 w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600 cursor-pointer">
         + Agregar
     </li>
 
-    <li (click)="irMarcador()" class="py-2 px-4 w-full cursor-pointer">
-        market 1
+    <li *ngFor="let marcador of marcadores; let i = index" (click)="irMarcador()"
+        [ngStyle]="{'background-color': marcador.color}" class="py-2 px-4 w-full cursor-pointer">
+        Marcador {{i+1}}
     </li>
 
 </ul>

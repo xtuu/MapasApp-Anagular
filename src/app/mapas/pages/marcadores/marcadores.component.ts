@@ -50,7 +50,13 @@ export class MarcadoresComponent implements AfterViewInit {
 
 
   agregarMarcador() {
-    const nuevoMarcador = new mapboxgl.Marker()
+    //color aleatorio
+    const color = "#xxxxxx".replace(/x/g, y => (Math.random() * 16 | 0).toString(16));
+
+    const nuevoMarcador = new mapboxgl.Marker({
+      draggable: true,
+      color
+    })
       .setLngLat(this.center)
       .addTo(this.mapa)
   }

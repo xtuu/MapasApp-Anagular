@@ -5,7 +5,7 @@
         + Agregar
     </li>
 
-    <li *ngFor="let marcador of marcadores; let i = index" (click)="irMarcador()"
+    <li *ngFor="let marcador of marcadores; let i = index" (click)="irMarcador(marcador.market)"
         [ngStyle]="{'background-color': marcador.color}" class="py-2 px-4 w-full cursor-pointer">
         Marcador {{i+1}}
     </li>

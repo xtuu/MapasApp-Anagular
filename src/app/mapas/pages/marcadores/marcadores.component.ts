@@ -36,9 +36,28 @@ export class MarcadoresComponent implements AfterViewInit {
       zoom: 15
     });
 
+
+    //cambiar la aparencia del marcador - opcional
+    // const markerHtml: HTMLElement = document.createElement('div');
+    // markerHtml.innerHTML = 'holisss'
+
+    // const market = new mapboxgl.Marker()
+    //   .setLngLat(this.center)
+    //   .addTo(this.mapa)
+
   }
 
-  ngOnInit(): void {
+
+
+  agregarMarcador() {
+    const nuevoMarcador = new mapboxgl.Marker()
+      .setLngLat(this.center)
+      .addTo(this.mapa)
   }
+
+  irMarcador() {
+
+  }
+
 
 }

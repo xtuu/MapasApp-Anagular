@@ -2,15 +2,15 @@
 
 
 
-<div class="bg-white rounded p-2 fixed bottom-8 left-5 z-50">
+<div class="bg-white rounded p-2 fixed bottom-8 left-5 z-50 w-96">
 
     <p>Zoom: <span class="font-bold">{{zoomLevel | number:'2.0-2'}}</span> -Lng, Lat: <span class="font-bold">[123,
             456]</span></p>
 
     <label for="default-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Default
         range</label>
-    <input id="default-range" type="range" value="50"
-        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+    <input id="default-range" type="range" [value]="zoomLevel" min="0" max="18" (input)="zoomCambio(zoomInput.value)"
+        #zoomInput class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
 
 
     <span class="isolate inline-flex rounded-md shadow-sm">
